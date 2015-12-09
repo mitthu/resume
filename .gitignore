@@ -1,0 +1,12 @@
+# Latex Specific
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.pdf
+
+# TextMate
+*.watcher_pid
+*.lb

@@ -1,0 +1,235 @@
+%!TEX program = xelatex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+
+
+\documentclass[]{deedy}
+% \usepackage[misc]{ifsym}
+\usepackage{marvosym}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Aditya}{Basu}{\Mundus\  \urlstyle{same}\url{http://adityabasu.me} | 
+\Letter\ \href{mailto:basu\_aditya@daiict.ac.in}{basu\_aditya@daiict.ac.in}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+
+\subsection{Dhirubhai Ambani}
+\descript{B.Tech. in Information and Communication Technology}
+\location{Grad. Jan 2015 | Gujarat, India \\
+Cum. GPA: 8.55 / 10 \\
+Major GPA: 9.52 / 10
+}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Research Interests
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Research Interests}
+Systems Security \textbullet{} Computer Networks
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{COURSEWORK}
+\subsection{Undergraduate}
+System and Network Security \\
+Systems Software \\
+Introduction to Algorithms \\
+Operating Systems \\
+Computer Networks \\
+Formal Specification and Verification
+\sectionsep
+
+\subsection{Graduate-level}
+Fuzzy-Neural Systems \\
+Approaches to Semantic Web \\
+\sectionsep
+
+\subsection{Select Projects}
+Personal Web Scrapbook\\
+File Sync Tool
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Over 5000 lines:}
+C \textbullet{} Python \textbullet{} Django \textbullet{} Bash \textbullet{} \LaTeX \textbullet{} Puppet \textbullet{} Ansible \textbullet{} Java
+\sectionsep
+
+\location{Over 1000 lines:}
+ARM Assembly \textbullet{} x86 Assembly \textbullet{} HTML \textbullet{} CSS \textbullet{} Javascript
+\sectionsep
+
+\subsection{Technologies}
+Linux \textbullet{} Mac \textbullet{} MySQL \textbullet{} GNU make
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/mitthu}{\custombold{mitthu}} \\
+LinkedIn://  \href{https://www.linkedin.com/in/mitthu}{\custombold{mitthu}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     HOBBIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Hobbies}
+Photography \textbullet{} Travelling \textbullet{} Programming circuits
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Refereed Publication}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}\item \custombold{Aditya Basu}, Anish Mathuria, Nagendra Chowdary. \href{https://dl.dropboxusercontent.com/u/9020146/resources/alpha-x86.pdf}{\custombold{Automatic Generation of Compact Alphanumeric Shellcodes for x86}}. \customitalics{10\textsuperscript{th} International Conference on Information Systems Security (Hyderabad, India), 16-20 Dec., 2014.}. (acceptance rate: 19\%) [\href{https://dl.dropboxusercontent.com/u/9020146/resources/ppt/alpha-x86.pdf}{\custombold{link to ppt}}]
+\end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research Experience}
+
+\subsection{Compact Alphanumeric Shellcodes for x86}
+\location{Feb. 2014 – June 2014 | Supervisor: Anish Mathuria | \href{https://dl.dropboxusercontent.com/u/9020146/resources/reports/major_project.pdf}{\custombold{link to pdf}}}
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Designed and implemented two new encoding schemes for producing compact alphanumeric shellcodes for x86, as compared to Rix and Wever.
+\end{tightemize}
+\sectionsep
+
+\subsection{Alphanumeric Shellcode Generator for ARM}
+\location{Nov. 2013 – Jan. 2014 | Supervisor: Anish Mathuria}
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Helped in testing out an alphanumeric generator for ARM and wrote report on the internals and working of the tool.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Credit Scheduler}
+\descript{| Summer Internship}
+\location{Jun. 2013 – Aug. 2013 | Supervisor: Sanjay Chaudhary}
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Studied scheduling algorithms used in virtualisation and tested them against various workloads.
+\end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Media.net}
+\descript{| System Operations }
+\location{July 2014 – Current | Mumbai, India}
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Automating and managing infrastructure serving >100 million reqs./day.
+\item Took two day training session on 
+\begin{enumerate*}[label=(\roman*)]
+  \item \customitalics{Advanced Linux}, and
+  \item \customitalics{Networking}
+\end{enumerate*}
+ for new recruitees.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Admission Portal of DA-IICT}
+\descript{| Software Developer}
+\location{Jun-Jul 2013 \& Jun-Jul 2014 | Gujarat, India}
+\begin{tightemize}
+\item Created the admission portal of the university using Django (python).
+\item The portal generates merit-lists and wait-lists of candidates based on their stream preferences and merit ranks. 
+\item The portal also handles all emails communications and provides a web interface for the candidates and the admissions team.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Course: System Software}
+\descript{| Teaching Assistant}
+\location{Jan. 2014 - Apr. 2014 | DA-IICT, Gujarat, India}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Awards
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards} 
+\begin{tabular}{rll}
+2014 & honor & Highest CGPA in UG among wards of SBV trust\\
+2011 & honor & Highest percentage in HSC among wards of SBV trust\\
+2010 & top 2.5 \customitalics{\%ile} & All India Engineering Entrance Examination (AIEEE)\\
+2010 & 97.5 / 120 & Gujarat Common Entrance Test (GUJCET)\\
+2007 & certified `A' grade & Intermediate Drawing, Gujarat State Examination Board\\
+\end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXTRACURRICULARS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Extracurriculars} 
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Founder and Coordinator of  \href{http://lpdaiict.wordpress.com/}{\custombold{Linux Pack club}}, DA-IICT.
+\item Made website of Electronic Hobby Club, DA-IICT.
+\item Attended \customitalics{Programming System on Chip-3 (PSoC-3) Workshop}. (May 2012)
+\item Attended \customitalics{Research Workshop on Intro. to Graph and Geometric Algo.} (Mar 2012)
+\item Conducted \href{https://dl.dropboxusercontent.com/u/9020146/resources/reports/rural_internship.pdf}{\custombold{survey}} for \customitalics{Jagrut Nagrik: Consumer Protection (NGO)}. (Dec 2011)
+\end{tightemize}
+
+\end{minipage} 
+\end{document}
