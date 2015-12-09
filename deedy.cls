@@ -25,12 +25,22 @@
 \definecolor{headings}{HTML}{6A6A6A}
 \definecolor{subheadings}{HTML}{333333}
 
-% Set main fonts
-\defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Color=primary, Path = fonts/lato/]{Lato-Lig}
-\setsansfont[Scale=MatchLowercase,Mapping=tex-text, Path = fonts/raleway/]{Raleway-ExtraLight}
-\newcommand{\custombold}[1]{\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Reg}\selectfont #1\normalfont}
-\newcommand{\customitalics}[1]{\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-LigIta}\selectfont #1\normalfont}
+% Declare Open fonts
+\newcommand{\openfonts} {
+	\defaultfontfeatures{Mapping=tex-text}
+	\setmainfont[Color=primary,Path=fonts/lato/,BoldItalicFont=Lato-RegIta,BoldFont=Lato-Reg,ItalicFont=Lato-LigIta]{Lato-Lig}
+	\setsansfont[Scale=MatchLowercase,Mapping=tex-text,Path=fonts/raleway/]{Raleway-ExtraLight}
+}
+
+% Declare Mac fonts
+\newcommand{\macfonts} {
+	\defaultfontfeatures{Mapping=tex-text}
+	\setmainfont[Color=primary]{Helvetica Light}
+	\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Helvetica Neue UltraLight}
+}
+
+% Select fonts => \openfonts or \macfonts
+\macfonts
 
 % Date command
 \setlength{\TPHorizModule}{1mm}
