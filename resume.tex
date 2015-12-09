@@ -1,56 +1,25 @@
 %!TEX program = xelatex
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Deedy - One Page Two Column Resume
-% LaTeX Template
-% Version 1.1 (30/4/2014)
-%
-% Original author:
-% Debarghya Das (http://debarghyadas.com)
-%
-% Original repository:
-% https://github.com/deedydas/Deedy-Resume
-%
-% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
-
 
 \documentclass[]{deedy}
-% \usepackage[misc]{ifsym}
 \usepackage{marvosym}
 
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     LAST UPDATED DATE
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Last updated
 % \lastupdated
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     TITLE NAME
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
+% Define title
 \namesection{Aditya}{Basu}{\Mundus\  \urlstyle{same}\url{http://adityabasu.me} | 
 \Letter\ \href{mailto:basu\_aditya@daiict.ac.in}{basu\_aditya@daiict.ac.in}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN ONE
-%
+% Column #1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{minipage}[t]{0.33\textwidth} 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EDUCATION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Education}
-
 \subsection{Dhirubhai Ambani}
 \descript{B.Tech. in Information and Communication Technology}
 \location{Grad. Jan 2015 | Gujarat, India \\
@@ -59,18 +28,10 @@ Major GPA: 9.52 / 10
 }
 \sectionsep
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Research Interests
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \subsection{Research Interests}
 Systems Security \textbullet{} Computer Networks
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     COURSEWORK
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{COURSEWORK}
+\section{Coursework}
 \subsection{Undergraduate}
 System and Network Security \\
 Systems Software \\
@@ -89,10 +50,6 @@ Approaches to Semantic Web \\
 Personal Web Scrapbook\\
 File Sync Tool
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     SKILLS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Skills}
 \subsection{Programming}
 \location{Over 5000 lines:}
@@ -106,46 +63,24 @@ ARM Assembly \textbullet{} x86 Assembly \textbullet{} HTML \textbullet{} CSS \te
 \subsection{Technologies}
 Linux \textbullet{} Mac \textbullet{} MySQL \textbullet{} GNU make
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     LINKS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Links} 
 Github:// \href{https://github.com/mitthu}{\textbf{mitthu}} \\
 LinkedIn://  \href{https://www.linkedin.com/in/mitthu}{\textbf{mitthu}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     HOBBIES
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Hobbies}
-Photography \textbullet{} Travelling \textbullet{} Programming circuits
+Photography \textbullet{} Travelling \textbullet{} Painting \textbullet{} Programming circuits
 
+\end{minipage} \hfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN TWO
-%
+% Column #2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\end{minipage} 
-\hfill
-\begin{minipage}[t]{0.66\textwidth} 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     PUBLICATIONS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\begin{minipage}[t]{0.66\textwidth}
 \section{Refereed Publication}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}\item \textbf{Aditya Basu}, Anish Mathuria, Nagendra Chowdary. \href{https://dl.dropboxusercontent.com/u/9020146/resources/alpha-x86.pdf}{\textbf{Automatic Generation of Compact Alphanumeric Shellcodes for x86}}. \textit{10\textsuperscript{th} International Conference on Information Systems Security (Hyderabad, India), 16-20 Dec., 2014.}. (acceptance rate: 19\%) [\href{https://dl.dropboxusercontent.com/u/9020146/resources/ppt/alpha-x86.pdf}{\textbf{link to ppt}}]
 \end{tightemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     RESEARCH EXPERIENCE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Research Experience}
-
 \subsection{Compact Alphanumeric Shellcodes for x86}
 \location{Feb. 2014 – June 2014 | Supervisor: Anish Mathuria | \href{https://dl.dropboxusercontent.com/u/9020146/resources/reports/major_project.pdf}{\textbf{link to pdf}}}
 % \vspace{\topsep} % Hacky fix for awkward extra vertical space
@@ -170,12 +105,7 @@ Photography \textbullet{} Travelling \textbullet{} Programming circuits
 \item Studied scheduling algorithms used in virtualisation and tested them against various workloads.
 \end{tightemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EXPERIENCE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Experience}
-
 \runsubsection{Media.net}
 \descript{| System Operations }
 \location{July 2014 – Current | Mumbai, India}
@@ -205,10 +135,6 @@ Photography \textbullet{} Travelling \textbullet{} Programming circuits
 \descript{| Teaching Assistant}
 \location{Jan. 2014 - Apr. 2014 | DA-IICT, Gujarat, India}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Awards
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Awards}
 \begin{tabular}{rll}
 2014 & honor & Highest CGPA in UG among wards of SBV trust\\
@@ -218,9 +144,6 @@ Photography \textbullet{} Travelling \textbullet{} Programming circuits
 2007 & certified `A' grade & Intermediate Drawing, Gujarat State Examination Board\\
 \end{tabular}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EXTRACURRICULARS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Extracurriculars} 
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
@@ -231,5 +154,5 @@ Photography \textbullet{} Travelling \textbullet{} Programming circuits
 \item Conducted \href{https://dl.dropboxusercontent.com/u/9020146/resources/reports/rural_internship.pdf}{\textbf{survey}} for \textbf{Jagrut Nagrik: Consumer Protection (NGO)}. (2011)
 \end{tightemize}
 
-\end{minipage} 
+\end{minipage}
 \end{document}
