@@ -11,7 +11,12 @@
 % Package Imports
 \usepackage[hmargin=1.25cm, vmargin=0.6cm]{geometry}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage{hyperref}
+\usepackage[pdfauthor={Aditya Basu},
+            pdftitle={Resume: Aditya Basu},
+            pdfsubject={Resume: Aditya Basu},
+            pdfkeywords={resume, cv, aditya basu, mitthu},
+            pdfproducer={Xelatex with hyperref},
+            pdfcreator=xelatex]{hyperref}
 \usepackage{titlesec}
 \usepackage[absolute]{textpos}
 \usepackage[UKenglish]{babel}
