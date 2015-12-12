@@ -1,18 +1,37 @@
 %!TEX program = xelatex
 
 \documentclass[]{deedy}
+
+% Package Imports
+% ---------------
+% For using symbols: links, email
 \usepackage{marvosym}
 
-% Definitions
-\newcommand{\linksymbol}{\Mundus}
+% For customizing underline
+\usepackage{soul}
 
+% Set underline policy
+\setul{2.5pt}{.4pt} % 1pt below contents
+
+% Definitions
+% -----------
+\newcommand{\linksymbol}{\Mundus}
+\newcommand{\linkstyle}[1]{\textbf{\ul{#1}}}
+
+% Update href command to include custom styling
+\let\oldhref\href
+\renewcommand{\href}[2]{%
+\oldhref{#1}{\linkstyle{#2}}%
+}
+
+% Start of document
 \begin{document}
 
 % Last updated
 % \lastupdated
 
 % Define title
-\namesection{Aditya}{Basu}{\linksymbol\  \urlstyle{same}\url{http://adityabasu.me} |
+\namesection{Aditya}{Basu}{\linksymbol\  \href{http://www.adityabasu.me}{http://adityabasu.me} |
 \Letter\ \href{mailto:basu\_aditya@daiict.ac.in}{basu\_aditya@daiict.ac.in}
 }
 
@@ -50,10 +69,10 @@ Approaches to Semantic Web\\
 \sectionsep
 
 \subsection{Select Projects}
-\textbf{\href{https://bitbucket.org/mitthu/capsule/src/}{Personal Web Scrapbook \linksymbol}}\\
+\href{https://bitbucket.org/mitthu/capsule/src/}{Personal Web Scrapbook}\\
 - Scrapes webpage for viewing later via chrome extension. [Python - Django]\\[1.5ex]
 
-\textbf{\href{https://github.com/mitthu/note-sync}{Note-Sync Tool \linksymbol}}\\
+\href{https://github.com/mitthu/note-sync}{Note-Sync Tool}\\
 - Watches a note via inotify (linux) / kqueues (mac) and sync it across computers. [C]
 
 \section{Skills}
@@ -70,8 +89,8 @@ ARM Assembly \textbullet{} x86 Assembly \textbullet{} HTML \textbullet{} CSS \te
 Linux \textbullet{} Mac \textbullet{} MySQL \textbullet{} GNU make
 
 \section{Links} 
-Github:// \href{https://github.com/mitthu}{\textbf{mitthu}} \\
-LinkedIn://  \href{https://www.linkedin.com/in/mitthu}{\textbf{mitthu}}
+Github:// \href{https://github.com/mitthu}{mitthu} \\
+LinkedIn://  \href{https://www.linkedin.com/in/mitthu}{mitthu}
 
 \section{Hobbies}
 Photography \textbullet{} Travelling \textbullet{} Painting \textbullet{} Programming circuits
@@ -83,12 +102,12 @@ Photography \textbullet{} Travelling \textbullet{} Painting \textbullet{} Progra
 \begin{minipage}[t]{0.66\textwidth}
 \section{Refereed Publication}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}\item \textbf{Aditya Basu}, Anish Mathuria, Nagendra Chowdary. \textbf{Automatic Generation of Compact Alphanumeric Shellcodes for x86}. 10\textsuperscript{th} International Conference on Information Systems Security (Hyderabad, India), 16-20 Dec., 2014. (acceptance rate: 19\%) [ \href{https://dl.dropboxusercontent.com/u/9020146/resources/alpha-x86.pdf}{\textbf{pdf}} | \href{http://dx.doi.org/10.1007/978-3-319-13841-1_22}{\textbf{doi}} | \href{https://dl.dropboxusercontent.com/u/9020146/resources/ppt/alpha-x86.pdf}{\textbf{ppt}} | \href{https://bitbucket.org/mitthu/alpha_loaders/src}{\textbf{code}} ]
+\begin{tightemize}\item \textbf{Aditya Basu}, Anish Mathuria, Nagendra Chowdary. \textbf{Automatic Generation of Compact Alphanumeric Shellcodes for x86}. 10\textsuperscript{th} International Conference on Information Systems Security (Hyderabad, India), 16-20 Dec., 2014. (acceptance rate: 19\%) [ \href{https://dl.dropboxusercontent.com/u/9020146/resources/alpha-x86.pdf}{pdf} | \href{http://dx.doi.org/10.1007/978-3-319-13841-1_22}{doi} | \href{https://dl.dropboxusercontent.com/u/9020146/resources/ppt/alpha-x86.pdf}{ppt} | \href{https://bitbucket.org/mitthu/alpha_loaders/src}{code} ]
 \end{tightemize}
 
 \section{Research Experience}
 \subsection{Compact Alphanumeric Shellcodes for x86}
-\location{Feb. 2014 – June 2014 | Supervisor: Anish Mathuria | \href{https://dl.dropboxusercontent.com/u/9020146/resources/reports/major_project.pdf}{\textbf{PDF \linksymbol}}}
+\location{Feb. 2014 – June 2014 | Supervisor: Anish Mathuria | \href{https://dl.dropboxusercontent.com/u/9020146/resources/reports/major_project.pdf}{PDF}}
 % \vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
 \item Designed and implemented two new encoding schemes for producing compact alphanumeric shellcodes for x86, as compared to Rix and Wever.
@@ -156,7 +175,7 @@ Photography \textbullet{} Travelling \textbullet{} Painting \textbullet{} Progra
 2013 & Founder and Coordinator of  \href{http://lpdaiict.wordpress.com/}{\textbf{Linux Pack club}}, DA-IICT.\\
 2012 & Attended \textbf{Programming System on Chip-3 (PSoC-3) Workshop}.\\
 2012 & Attended \textbf{Research Workshop on Intro. to Graph and Geometric Algo.}\\
-2011 & Conducted survey for \textbf{Jagrut Nagrik: Consumer Protection (NGO)}. [ \href{https://dl.dropboxusercontent.com/u/9020146/resources/reports/rural_internship.pdf}{\textbf{pdf}} ]\\
+2011 & Conducted survey for \textbf{Jagrut Nagrik: Consumer Protection (NGO)}. [ \href{https://dl.dropboxusercontent.com/u/9020146/resources/reports/rural_internship.pdf}{pdf} ]\\
 \end{tabular}
 
 \end{minipage}
