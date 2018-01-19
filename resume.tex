@@ -36,7 +36,8 @@
 
 % Define title
 \namesection{Aditya}{Basu}{\linksymbol\  \href{http://www.adityabasu.me}{http://adityabasu.me} |
-\Letter\ \href{mailto:ab.aditya.basu@gmail.com}{ab.aditya.basu@gmail.com}
+%\Letter\ \href{mailto:ab.aditya.basu@gmail.com}{ab.aditya.basu@gmail.com} |
+\Letter\ \href{mailto:azb254@cse.psu.edu}{azb254@cse.psu.edu}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -46,40 +47,64 @@
 \begin{minipage}[t]{0.33\textwidth} 
 
 \section{Education}
+\subsection{Penn State Univ. (PSU)}
+\descript{PhD in Computer Science}
+\location{On Going | University Park, PA \\
+Cum. GPA: 3.83 / 4
+}
+\sectionsep
+
 \subsection{Dhirubhai Ambani (DA-IICT)}
 \descript{B.Tech. in Information and Communication Technology}
 \location{Grad. Jan 2015 | Gujarat, India \\
-Cum. GPA: 8.55 / 10 \\
-Major GPA: 9.52 / 10
+Cum. GPA: 8.55 / 10
+%Major GPA: 9.52 / 10
 }
 \sectionsep
 
 \subsection{Research Interests}
-Systems Security \textbullet{} Computer Networks
+Systems Security \textbullet{} Operating Systems
 
 \section{Coursework}
+\subsection{Graduate}
+Computer Security \grade{A}\\
+Hardware Security \grade{A}\\
+Operating System Design \grade{A}\\
+%Computer Networks \grade{A-}\\
+\sectionsep
+
 \subsection{Undergraduate}
 System and Network Security \grade{AA}\\
 Systems Software \grade{AA}\\
 Operating Systems \grade{AA}\\
 Embedded Hardware Design \grade{AA}\\
-Formal Specification \& Verification \grade{AA}
-Computer Networks \grade{BB}\\
+%Formal Specification \& Verification \grade{AA}
+%Computer Networks \grade{BB}\\
+%Approaches to Semantic Web \grade{AB}\\
+%Fuzzy-Neural Systems \grade{BB}\\
 \sectionsep
 
-\subsection{Graduate-level}
-Approaches to Semantic Web \grade{AB}\\
-Fuzzy-Neural Systems \grade{BB}\\
-\sectionsep
+%\subsection{Graduate-level}
+%Approaches to Semantic Web \grade{AB}\\
+%Fuzzy-Neural Systems \grade{BB}\\
+%\sectionsep
 
 \subsection{Select Projects}
-\subsubsection*{Personal Web Scrapbook}
-{\small Django | 10 hrs./week | 8 weeks | \href{https://bitbucket.org/mitthu/capsule/src/}{CODE}}\\[1ex]
-Scrapes and saves webpages to a central server via chrome extension.\\[1.5ex]
+\subsubsection*{Side-Channel (SC) on RSA}
+{\small Verilog | 10 hrs./week | 8 weeks}\\[1ex]
+Implemented RSA on FPGA and did SCA to find the private key.\\[1.5ex]
 
-\subsubsection*{Note-Sync Tool}
-{\small C | 10 hrs./week | 4 weeks | \href{https://github.com/mitthu/note-sync}{CODE}}\\[1ex]
-Watches a note via inotify (linux) / kqueues (mac) and syncs it on change.
+\subsubsection*{Key-Value Server-Client}
+{\small C++ | 10 hrs./week | 8 weeks}\\[1ex]
+Coded a sync \& an async version of KV server, which was highly available.
+
+%\subsubsection*{Personal Web Scrapbook}
+%{\small Django | 10 hrs./week | 8 weeks | \href{https://bitbucket.org/mitthu/capsule/src/}{CODE}}\\[1ex]
+%Scrapes and saves webpages to a central server via chrome extension.\\[1.5ex]
+%
+%\subsubsection*{Note-Sync Tool}
+%{\small C | 10 hrs./week | 4 weeks | \href{https://github.com/mitthu/note-sync}{CODE}}\\[1ex]
+%Watches a note via inotify (linux) / kqueues (mac) and syncs it on change.
 
 \section{Skills}
 \subsection{Programming}
@@ -92,20 +117,24 @@ ARM Assembly \textbullet{} x86 Assembly \textbullet{} CSS \textbullet{} Javascri
 \sectionsep
 
 \subsection{Technologies}
-Git \textbullet{} Linux \textbullet{} Mac \textbullet{} GNU make \textbullet{} MySQL
+Git \textbullet{} Linux \textbullet{} Mac \textbullet{} GNU make \textbullet{} Docker %MySQL
 
 \section{Links} 
-Github:// \href{https://github.com/mitthu}{mitthu} \\
+Github:// \href{https://github.com/mitthu}{mitthu} \textbullet{} 
 LinkedIn://  \href{https://www.linkedin.com/in/mitthu}{mitthu}
 
 \section{Hobbies}
-Photography \textbullet{} Travelling \textbullet{} Painting \textbullet{} Programming circuits
+Programming circuits \textbullet{} Karate
+%Photography \textbullet{} Travelling \textbullet{} Painting \textbullet{} Programming circuits
 
-\end{minipage} \hfill
+\end{minipage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Column #2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{minipage}[t]{0.66\textwidth}
+%\hfill
+\vrule{}
+\hfill
+\begin{minipage}[t]{0.65\textwidth}
 \section{Refereed Publication}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
@@ -114,6 +143,14 @@ Photography \textbullet{} Travelling \textbullet{} Painting \textbullet{} Progra
 \end{tightemize}
 
 \section{Research Experience}
+\subsection{CFI-enforcement on Linux}
+\location{Aug. 2017 – current | 20 hrs./week | Supervisor: Trent Jaeger}
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Intrumenting the Linux kernel to generate CFI policy and enforce it at runtime.
+\end{tightemize}
+\sectionsep
+
 \subsection{Compact Alphanumeric Shellcodes for x86}
 \location{Feb. 2014 – Apr. 2014 | 25 hrs./week | Supervisor: Anish Mathuria | \href{https://dl.dropboxusercontent.com/u/9020146/resources/reports/major_project.pdf}{REPORT}}
 % \vspace{\topsep} % Hacky fix for awkward extra vertical space
@@ -122,23 +159,28 @@ Photography \textbullet{} Travelling \textbullet{} Painting \textbullet{} Progra
 \end{tightemize}
 \sectionsep
 
-\subsection{Alphanumeric Shellcode Generator for ARM}
-\location{Nov. 2013 – Jan. 2014 | 25 hrs./week | Supervisor: Anish Mathuria}
-% \vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-\item Helped in testing out an alphanumeric generator for ARM and wrote report on the internals of the tool. The tool was designed by another UG student.
-\end{tightemize}
-\sectionsep
+%\subsection{Alphanumeric Shellcode Generator for ARM}
+%\location{Nov. 2013 – Jan. 2014 | 25 hrs./week | Supervisor: Anish Mathuria}
+%% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+%\begin{tightemize}
+%\item Helped in testing out an alphanumeric generator for ARM and wrote report on the internals of the tool. The tool was designed by another UG student.
+%\end{tightemize}
+%\sectionsep
 
-\runsubsection{Credit Scheduler}
-\descript{| Summer Internship}
-\location{Jun. 2013 – Aug. 2013 | 20 hrs./week | Supervisor: Sanjay Chaudhary}
-% \vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-\item Studied scheduling algorithms used in virtualisation and tested them against various workloads.
-\end{tightemize}
+%\runsubsection{Credit Scheduler}
+%\descript{| Summer Internship}
+%\location{Jun. 2013 – Aug. 2013 | 20 hrs./week | Supervisor: Sanjay Chaudhary}
+%% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+%\begin{tightemize}
+%\item Studied scheduling algorithms used in virtualisation and tested them against various workloads.
+%\end{tightemize}
 
 \section{Experience}
+\runsubsection{Course: Operating System}
+\descript{| Teaching Assistant}
+\location{Jan. 2018 - Current, Aug. 2016 - Dec. 2017 | 20 hrs./week | PSU, PA, USA}
+\sectionsep
+
 \runsubsection{Media.net}
 \descript{| System Operations }
 \location{July 2014 – Current | 45 hrs./week (full-time) | Mumbai, India}
