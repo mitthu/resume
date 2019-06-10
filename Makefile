@@ -2,8 +2,12 @@ SRC=resume.tex
 TARGET=resume.pdf
 
 $TARGET: *.tex *.cls
-	xelatex ${SRC}
+	xelatex --shell-escape ${SRC}
 	open ${TARGET}
+
+.PHONY: version
+version:
+	@git log --date=short --format="dt. %ad || ver. %h" -n 1
 
 .PHONY: clean
 clean:

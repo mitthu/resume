@@ -57,6 +57,12 @@ Last Updated on
 \today
 \end{textblock}}
 
+% Version command
+\newcommand{\version}{\begin{textblock}{40}(165,0)
+\fontspec[Path = fonts/raleway/]{Raleway-ExtraLight}\fontsize{8pt}{10pt}\selectfont
+\input|"make version"
+\end{textblock}}
+
 % Name command
 \newcommand{\namesection}[3]{
 	\centering{
