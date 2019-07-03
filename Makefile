@@ -1,6 +1,7 @@
 # Default variables
 BASE=.
 OUTPUT=resume.pdf cv/cv-res.pdf
+PUBLISH=publish/
 
 # Target-specific variables
 resume: BASE=.
@@ -33,9 +34,10 @@ resume: default
 cv: default
 
 default:
-	echo "Build"
 	cd ${BASE}; xelatex --shell-escape ${SRC}
-	open ${BASE}/${OUTPUT}
+	mkdir -p ${PUBLISH}
+	cp ${BASE}/${OUTPUT} ${PUBLISH}/
+	-open ${BASE}/${OUTPUT}
 
 # Rules: extras
 .PHONY: version
@@ -46,4 +48,4 @@ version:
 clean:
 	rm -rf *.aux *.log *.out *.synctex.gz *.dvi
 	rm -rf cv/*.aux cv/*.log cv/*.out cv/*.synctex.gz cv/*.dvi
-	rm -rf ${OUTPUT}
+	rm -rf ${OUTPUT} ${PUBLISH}
