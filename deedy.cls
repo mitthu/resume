@@ -45,7 +45,7 @@
 }
 
 % Select fonts => \openfonts or \macfonts
-\macfonts
+\openfonts
 
 % Date command
 \setlength{\TPHorizModule}{1mm}
@@ -60,7 +60,7 @@ Last Updated on
 % Version command
 \newcommand{\version}{\begin{textblock}{40}(165,0)
 \fontspec[Path = fonts/raleway/]{Raleway-ExtraLight}\fontsize{8pt}{10pt}\selectfont
-\input|"make version"
+\input|"make --silent version"
 \end{textblock}}
 
 % Name command
