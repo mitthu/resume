@@ -12,7 +12,7 @@
 export PATH=/tmp/texlive/bin/x86_64-linux:$PATH
 if ! command -v texlua > /dev/null; then
   # Obtain TeX Live
-  wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+  wget -nv http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
   tar -xzf install-tl-unx.tar.gz
   cd install-tl-20*
 
@@ -96,6 +96,24 @@ tlmgr install   \
   xunicode      \
   zhmetrics     \
   zhnumber
+
+# For resume
+tlmgr repository add http://contrib.texlive.info/current tlcontrib
+tlmgr install   \
+  geometry      \
+  xcolor        \
+  fontspec      \
+  xltxtra       \
+  xunicode      \
+  titlesec      \
+  textpos        \
+  babel         \
+  babel-english \
+  substr      \
+  realscripts \
+  marvosym    \
+  soul        \
+  isodate
 
 # For the doc target
 tlmgr install \

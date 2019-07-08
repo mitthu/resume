@@ -10,3 +10,6 @@
 # TextMate
 *.watcher_pid
 *.lb
+
+# CI / Deploy
+publish/

@@ -1,7 +1,9 @@
 # Default variables
 BASE=.
 OUTPUT=resume.pdf cv/cv-res.pdf
-PUBLISH=publish/
+PUBLISH=publish
+
+export PATH:=/tmp/texlive/bin/x86_64-linux:${PATH}
 
 # Target-specific variables
 resume: BASE=.
@@ -18,6 +20,7 @@ cv: OUTPUT=cv-res.pdf
 # resume:  build single page resume
 # cv:      build cv
 # default: does the actual build
+# setup:   setup environment
 # version: *.tex files calls `make version`. It returns
 #          the short SHA commit ID of HEAD.
 # clean:   remove build files
@@ -26,6 +29,7 @@ cv: OUTPUT=cv-res.pdf
 all:
 	$(MAKE) resume
 	$(MAKE) cv
+	-open $(publish)/index.html
 
 .PHONY: resume
 resume: default
@@ -37,7 +41,12 @@ default:
 	cd ${BASE}; xelatex --shell-escape ${SRC}
 	mkdir -p ${PUBLISH}
 	cp ${BASE}/${OUTPUT} ${PUBLISH}/
+	cp templates/index.html ${PUBLISH}/
 	-open ${BASE}/${OUTPUT}
+
+.PHONY: setup
+setup:
+	cd build; ./texlive.sh
 
 # Rules: extras
 .PHONY: version
