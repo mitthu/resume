@@ -5,6 +5,7 @@
 *.synctex.gz
 *.fdb_latexmk
 *.fls
+*.dvi
 *.pdf
 
 # TextMate
