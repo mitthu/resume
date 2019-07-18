@@ -1,115 +1,150 @@
-% LaTeX file for resume 
-% This file uses the resume document class (res.cls)
+% Copyright of Aditya Basu, 27-Aug-2019.
 
 \documentclass[margin]{res} 
 % the margin option causes section titles to appear to the left of body text 
 \textwidth=5.2in % increase textwidth to get smaller right margin
 %\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
 %\usepackage{newcent}   % uses new century schoolbook postscript font 
+\usepackage[inline]{enumitem}
 
-\begin{document} 
- 
-\name{Thomas R. Lucky\\[12pt]} % the \\[12pt] adds a blank line after name
+% Custom lists, package: enumitem
+\newlist{itemizeexp}{itemize}{1} % itemize experience
+\setlist[itemizeexp]{
+    label       = \textbullet,
+    rightmargin = 2cm,
+    itemsep     = -2pt % reduce space between items
+}
+
+\begin{document}
+\raggedright
+\name{Aditya Basu\\[12pt]} % the \\[12pt] adds a blank line after name
 
 % \address{{\bf Present Address} \\ 204 Pawling Avenue \\ Troy, NY 12180  \\
 %         (518) 273-4617 }
 % \address{{\bf Permanent Address} \\ 29 Runner Lane \\ Syosset, NY 11971 \\
 %        (516) 921-7653 }
 
- 
 \begin{resume} 
+\section{Background}
+My research interests are in \emph{Systems Security} and \emph{Operating Systems}.
 
-\section{Objective} 
-Auditing/Analysis of Operations 
+\section{Education}
 
-\section{Education} 
-B.S. in Management, Rensselaer Polytechnic Institute, Troy, NY, May 1986 \\
-Concentrations in Accounting and Management Systems \\
-QPA 3.9 in major, 3.7 overall
- 
+PhD Candidate, Pennsylvania State University, PA, USA \hfill (exp.) May '21\\
+Computer Science, GPA: 3.85 (of 4)
 
-\section{Experience}
- {\bf Consultant,} National Money Bank USA, Melville, NY \hfill Summer  1985
- \begin{itemize} \itemsep -2pt  % reduce space between items
- \item Created regression model to lower check volume 
-                 forecast errors
- \item Authored PC-based software to determine optimal 
-                 staff levels 
- \end{itemize}
+B.Tech, Dhirubhai Ambani Institute (DA-IICT), Gujarat, India \hfill Jan '15\\
+Information and Communication Technology\\
+GPA: 9.52 (of 10) in major,
+8.55 overall 
 
- 
- 
-{\bf System Consultant,} Fleet Van Lines, Bayridge, NY \hfill  Summer 1984
-\begin{itemize} \itemsep -2pt %reduce space between items
-\item Researched, implemented new computer accounting 
-                 system 
-\item Customized existing software for inventory 
-                 management 
-\item Trained employees on both accounting and inventory 
-                 systems 
-\end{itemize}
+\section{Coursework}
+\begin{tabular}{l p{2.5in}}
+PennState   & $\vert$ Computer Security (A)\\
+            & $\vert$ Hardware Security (A)\\
+            & $\vert$ Operating System Design (A)\\
+\\
+DA-IICT     & $\vert$ System and Network Security (A)\\
+            & $\vert$ Systems software (A)\\
+            & $\vert$ Operating systems (A)\\
+            & $\vert$ Embedded Hardware Design (A)\\
+            & $\vert$ Formal Specification \& Verification (A)
+\end{tabular}
 
-{\bf Computer Salesman,} Solutions Unlimited, Lake Grove, NY \hfill
-Summer 1983                
-                \begin{itemize} \itemsep -2pt
-                 \item  Demonstrated extensive range of software and 
-                 hardware 
-                
-                 \item Developed leads by offering seminars for specific 
-                 professions 
+\section{Industry Experience}
+%{\bf Title,} Company, City, State, Country \hfill Year
+%\begin{itemizeexp}
+%    \item Template
+%\end{itemizeexp}
 
-     \end{itemize}
+{\bf Software Engineering Intern,} Google, Cambridge, MA, USA
+\hfill Summer  2019 % May 13 - August 16
+\begin{itemizeexp}
+    \item Added support for Intel VT-d to the Akaros kernel from UC Berkeley.
+    Wrote a device passthru driver with support for processes and VMs.
+    \item Wrote the CBDMA (DMA accelerator on Intel, aka IOAT) driver for
+    Akaros.
+\end{itemizeexp}
 
-\section{Leadership   Activities} 
-               {\bf Co-founder,} Monarch Computer Products Inc., Freeport, NY    \hfill         1985 
-                \begin{itemize} \itemsep -2pt
-              \item Leader of marketing effort for V.R.S. (Video 
-                 Rental System), \\
-                  currently in test phase 
-                 
-                \item  Perform accounting duties 
+{\bf Product Security Intern,} NIO, San Jose, CA, USA
+\hfill Summer 2018 % May 2018 - Aug. 2018
+\begin{itemizeexp}
+    \item Worked on securing and pen-testing ES8's (SUV) firmware and it's OBD-II diagnostics port.
+    \item Created driver and firmware patches to fix the vulnerabilities.
+\end{itemizeexp}
 
-     \end{itemize}
+{\bf System Operations,} Media.net, Mumbai, India
+\hfill 2014 - 2016 % July 2014 - July 2016
+\begin{itemizeexp}
+    \item Automating and managing infrastructure serving $>$100 million reqs./day.
+    \item Took two day training session on 
+    \begin{enumerate*}[label=(\roman*)]
+      \item \textit{Advanced Linux}, and
+      \item \textit{Networking}
+    \end{enumerate*}
+     for new recruits.
+\end{itemizeexp}
 
-    {\bf President,} Delta Epsilon Pi Fraternity \hfill   1985 
-                \begin{itemize} \itemsep -2pt
-                 \item  Responsible for the overall performance of the 
-                 chapter 
-                
-                 \item Chair all house and alumni committee meetings 
-                
-                 \item Liaison to the national fraternity and the RPI 
-                 administration 
-     \end{itemize}
+\section{Assistantships} 
+\begin{description}
+    \item[Research Assistant,] PennState \hfill Fall'18 - current
+    \item[Teaching Assistant,] PennState - CMPSC473 Operating Systems \hfill Spring '18 % Jan. 2018 - May 2018
+    \item[Research Assistant,] PennState \hfill 2017
+    \item[Teaching Assistant,] PennState - CMPSC473 Operating Systems \hfill Fall '16 % Aug. 2016 - Dec. 2016 
+    \item[Teaching Assistant,] DA-IICT - Systems Software \hfill Spring '14 % Jan. 2014 - Apr. 2014 
+\end{description}
 
-                  {\bf  Director,}  Rensselaer Fraternity Managers 
-              Association     \hfill                                 1984 
-                 \begin{itemize} \itemsep -2pt
+\section{Skills}
+% Have used at some point:
+%    ARM assembly, Javascript, MySQL
+%    Matlab, Altera (FPGA), Xilinx (FPGA), Verilog
+%    Postgres, MariaDB, Redis, MongoDB
+%    Mesos, Hadoop, HBase
+%    Wireshark
+\begin{description}
+    \item[$>10k$ lines:]
+        C \textbullet{}
+        Python \textbullet{}
+        bash \textbullet{}
+        \LaTeX\ (macros) \textbullet{}
+        HTML
 
-               \item    Evaluated and approved purchases in excess of 
-                 {\$}1,000,000 yearly 
-                 
-               \item  Formulated bookkeeping checklists for use by all 
-                 fraternities 
-     \end{itemize}
+    \item[$5k-10k$ lines:]
+        Django \textbullet{}
+        Puppet \textbullet{}
+        Ansible \textbullet{}
+        Java \textbullet{}
+        CSS
 
-\section{Academic \\ Honors} 
-Dean's List of Distinguished Students, all semesters \\
-National Merit Scholarship \\
-Alan T. Hundert Memorial Scholarship \\
- Epsilon Delta Sigma, Honorary Management Society 
- 
+    \item[Utilities:]
+        make \textbullet{}
+        git \textbullet{}
+        Docker \textbullet{}
+        strace \textbullet{}
+        gdb
 
-% Tabulate Computer Skills; p{3in} defines paragraph 3 inches wide
-\section{Computer \\ Skills}
-   \begin{tabular}{l p{3in}}
-    \underline{Languages:} & COBOL, Pascal,C, APL, Basic \\
+    \item[Others:]
+        Linux \textbullet{}
+        Mac OS X \textbullet{}
+        Markdown \textbullet{}
+        IDA Hex-Rays
+\end{description}
 
-     \underline{Software:} &  SPIRES, dBase III, Datastar database 
-                        systems, GPSS simulation, FCS-EPS financial 
-                        planning, SAS statistical analysis, 
-                        Lotus1-2-3, MPSX optimization modeling 
- \end{tabular}
+\section{Awards and Certifications}
+% add GRE and TOEFL scores
+Highest CGPA in UG among wards of SVB trust\hfill 2014\\
+Highest percentage in HSC among wards of SVB trust\hfill 2011\\
+$top\ 2.5\%ile$ in All India Engineering Entrance Examination (AIEEE)\hfill 2010\\
+$97.5 / 120$ in Gujarat Common Entrance Test (GUJCET)\hfill 2010\\
+Certified `A' grade in Intermediate Drawing, Gujarat State Examination Board\hfill 2007\\
+
+%\section{Extracurriculars}
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+%\begin{tabular}{ll}
+%2013 & Founder and coordinator of  \href{http://lpdaiict.wordpress.com/}{LINUX PACK CLUB}, DA-IICT.\\
+%2012 & Attended \textbf{Programming System on Chip-3 (PSoC-3) Workshop}.\\
+%2012 & Attended \textbf{Research Workshop on Intro. to Graph and Geometric Algo.}
+%\end{tabular}
 
 \end{resume} 
 \end{document} 
