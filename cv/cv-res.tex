@@ -6,10 +6,19 @@
 \textwidth=5.2in % increase textwidth to get smaller right margin
 %\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
 %\usepackage{newcent}   % uses new century schoolbook postscript font 
+\usepackage{enumitem}
 
 \usepackage[usenames,dvipsnames]{xcolor}
 \definecolor{light-gray}{gray}{0.95}
 \newcommand{\grade}[1]{{\fboxsep=0.4ex\colorbox{light-gray}{\small{{#1}}}}}
+
+% Custom lists, package: enumitem
+\newlist{itemizeexp}{itemize}{1} % itemize experience
+\setlist[itemizeexp]{
+    label       = \textbullet,
+    rightmargin = 2cm,
+    itemsep     = -2pt % reduce space between items
+}
 
 \begin{document} 
 \raggedright
@@ -35,28 +44,30 @@ GPA: 9.52 (of 10) in major,
 
 \section{Coursework}
 \begin{tabular}{l p{2.5in}}
-PennState   & $\bullet$ Computer Security (A)\\
-            & $\bullet$ Hardware Security (A)\\
-            & $\bullet$ Operating System Design (A)\\
+PennState   & $\vert$ Computer Security (A)\\
+            & $\vert$ Hardware Security (A)\\
+            & $\vert$ Operating System Design (A)\\
 \\
-DA-IICT     & System and Network Security (AA)\\
-            & Systems software (AA)\\
-            & Operating systems (AA)\\
-            & Embedded Hardware Design (AA)\\
-            & Formal Specification \& Verification (AA)
+DA-IICT     & $\vert$ System and Network Security (AA)\\
+            & $\vert$ Systems software (AA)\\
+            & $\vert$ Operating systems (AA)\\
+            & $\vert$ Embedded Hardware Design (AA)\\
+            & $\vert$ Formal Specification \& Verification (AA)
 \end{tabular}
 
-\section{Experience}
- {\bf Consultant,} National Money Bank USA, Melville, NY \hfill Summer  1985
- \begin{itemize} \itemsep -2pt  % reduce space between items
- \item Created regression model to lower check volume 
-                 forecast errors
- \item Authored PC-based software to determine optimal 
-                 staff levels 
- \end{itemize}
+\section{Research\\ Interests}
+Systems Security \textbullet{} Operating Systems
 
- 
- 
+\section{Experience}
+{\bf Software Engineering Intern,} Google, Cambridge, MA
+\hfill Summer  2019 % May 13 - August 16
+\begin{itemizeexp}
+    \item Added support for Intel VT-d to the Akaros kernel from UC Berkeley.
+    Wrote a device passthru driver with support for processes and VMs.
+    \item Wrote the CBDMA (DMA accelerator on Intel, aka IOAT) driver for
+    Akaros.
+\end{itemizeexp}
+
 {\bf System Consultant,} Fleet Van Lines, Bayridge, NY \hfill  Summer 1984
 \begin{itemize} \itemsep -2pt %reduce space between items
 \item Researched, implemented new computer accounting 

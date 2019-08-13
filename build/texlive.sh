@@ -113,6 +113,7 @@ tlmgr install   \
   realscripts \
   marvosym    \
   soul        \
+  enumitem    \
   isodate
 
 # For the doc target
