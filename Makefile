@@ -4,6 +4,7 @@ OUTPUT=resume.pdf cv/cv-res.pdf
 PUBLISH=publish
 
 export PATH:=/tmp/texlive/bin/x86_64-linux:${PATH}
+OPEN=open
 
 # Target-specific variables
 resume: BASE=.
@@ -13,6 +14,13 @@ resume: OUTPUT=resume.pdf
 cv: BASE=cv
 cv: SRC=cv-res.tex
 cv: OUTPUT=cv-res.pdf
+
+# Detect WSL
+WSLENV ?= notwsl
+ifndef WSLENV
+    # this runs when you are in WSL
+    OPEN=powershell.exe Start
+endif
 
 # Rules
 # =====
@@ -42,7 +50,7 @@ default:
 	mkdir -p ${PUBLISH}
 	cp ${BASE}/${OUTPUT} ${PUBLISH}/
 	cp templates/index.html ${PUBLISH}/
-	-open ${BASE}/${OUTPUT}
+	-${OPEN} ${BASE}/${OUTPUT}
 
 .PHONY: setup
 setup:
