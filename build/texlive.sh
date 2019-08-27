@@ -114,6 +114,7 @@ tlmgr install   \
   marvosym    \
   soul        \
   enumitem    \
+  fancyhdr    \
   isodate
 
 # For the doc target

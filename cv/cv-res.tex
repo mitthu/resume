@@ -16,6 +16,17 @@
     itemsep     = -2pt % reduce space between items
 }
 
+% setup header and footer
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\newcommand{\version}{\input|"make -f ../Makefile --silent version"}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyfoot{} % clear all footer fields
+\lfoot{\version}
+\rfoot{\thepage}
+
 \begin{document}
 \raggedright
 \name{Aditya Basu\\[12pt]} % the \\[12pt] adds a blank line after name
