@@ -47,6 +47,10 @@ cv: default
 
 default:
 	cd ${BASE}; xelatex --shell-escape ${SRC}
+	-cd ${BASE}; bibtex ${SRC:.tex=.aux}
+	cd ${BASE}; xelatex --shell-escape ${SRC}
+	cd ${BASE}; xelatex --shell-escape ${SRC}
+
 	mkdir -p ${PUBLISH}
 	cp ${BASE}/${OUTPUT} ${PUBLISH}/
 	cp templates/index.html ${PUBLISH}/
@@ -63,6 +67,6 @@ version:
 
 .PHONY: clean
 clean:
-	rm -rf *.aux *.log *.out *.synctex.gz *.dvi
-	rm -rf cv/*.aux cv/*.log cv/*.out cv/*.synctex.gz cv/*.dvi
+	rm -rf *.aux *.log *.out *.synctex.gz *.dvi *.bbl *.blg
+	rm -rf cv/*.aux cv/*.log cv/*.out cv/*.synctex.gz cv/*.dvi cv/*.bbl cv/*.blg
 	rm -rf ${OUTPUT} ${PUBLISH}

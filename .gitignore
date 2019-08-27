@@ -6,6 +6,8 @@
 *.fdb_latexmk
 *.fls
 *.pdf
+*.bbl
+*.blg
 
 # TextMate
 *.watcher_pid
@@ -13,3 +15,6 @@
 
 # CI / Deploy
 publish/
+
+# Misc
+*.swp
