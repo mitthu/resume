@@ -5,14 +5,20 @@
 \textwidth=5.2in % increase textwidth to get smaller right margin
 %\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
 %\usepackage{newcent}   % uses new century schoolbook postscript font 
-\usepackage[inline]{enumitem}
 \usepackage{hyperref}
 
 % Custom lists, package: enumitem
+\usepackage[inline]{enumitem}
 \newlist{itemizeexp}{itemize}{1} % itemize experience
 \setlist[itemizeexp]{
     label       = \textbullet,
     rightmargin = 2cm,
+    itemsep     = -2pt % reduce space between items
+}
+
+\newlist{itemizemisc}{itemize}{1} % itemize experience
+\setlist[itemizemisc]{
+    label       = \textbullet,
     itemsep     = -2pt % reduce space between items
 }
 
@@ -27,6 +33,11 @@
 \lfoot{\version}
 \rfoot{\thepage}
 
+% commands
+\newcommand{\daiict}{\textsc{Da-iict}}
+\newcommand{\psu}{\textsc{PennState}}
+
+% main document
 \begin{document}
 \raggedright
 \name{Aditya Basu\\[12pt]} % the \\[12pt] adds a blank line after name
@@ -53,18 +64,18 @@ My research interests are in \emph{Systems Security} and \emph{Operating Systems
 PhD Candidate, Pennsylvania State University, PA, USA \hfill (exp.) May '21\\
 Computer Science, GPA: 3.85 (of 4)
 
-B.Tech, Dhirubhai Ambani Institute (DA-IICT), Gujarat, India \hfill Jan '15\\
+B.Tech, Dhirubhai Ambani Institute (\daiict), Gujarat, India \hfill Jan '15\\
 Information and Communication Technology\\
 GPA: 9.52 (of 10) in major,
 8.55 overall 
 
 \section{Coursework}
 \begin{tabular}{l p{2.5in}}
-PennState   & $\vert$ Computer Security (A)\\
+\psu        & $\vert$ Computer Security (A)\\
             & $\vert$ Hardware Security (A)\\
             & $\vert$ Operating System Design (A)\\
 \\
-DA-IICT     & $\vert$ System and Network Security (A)\\
+\daiict     & $\vert$ System and Network Security (A)\\
             & $\vert$ Systems software (A)\\
             & $\vert$ Operating systems (A)\\
             & $\vert$ Embedded Hardware Design (A)\\
@@ -128,11 +139,11 @@ DA-IICT     & $\vert$ System and Network Security (A)\\
 
 \section{Assistantships} 
 \begin{description}
-    \item[Research Assistant,] PennState \hfill Fall'18 - current
-    \item[Teaching Assistant,] PennState - CMPSC473 Operating Systems \hfill Spring '18 % Jan. 2018 - May 2018
-    \item[Research Assistant,] PennState \hfill 2017
-    \item[Teaching Assistant,] PennState - CMPSC473 Operating Systems \hfill Fall '16 % Aug. 2016 - Dec. 2016 
-    \item[Teaching Assistant,] DA-IICT - Systems Software \hfill Spring '14 % Jan. 2014 - Apr. 2014 
+    \item[Research Assistant,] \psu \hfill Fall'18 - current
+    \item[Teaching Assistant,] \psu\ -- CMPSC473: Operating Systems \hfill Spring '18 % Jan. 2018 - May 2018
+    \item[Research Assistant,] \psu \hfill 2017
+    \item[Teaching Assistant,] \psu\ -- CMPSC473: Operating Systems \hfill Fall '16 % Aug. 2016 - Dec. 2016 
+    \item[Teaching Assistant,] \daiict\ -- IT215: Systems Software \hfill Spring '14 % Jan. 2014 - Apr. 2014 
 \end{description}
 
 \section{Skills}
@@ -173,19 +184,28 @@ DA-IICT     & $\vert$ System and Network Security (A)\\
 
 \section{Awards and Certifications}
 % add GRE and TOEFL scores
-Highest CGPA in UG among wards of SVB trust\hfill 2014\\
-Highest percentage in HSC among wards of SVB trust\hfill 2011\\
-$top\ 2.5\%ile$ in All India Engineering Entrance Examination (AIEEE)\hfill 2010\\
-$97.5 / 120$ in Gujarat Common Entrance Test (GUJCET)\hfill 2010\\
-Certified `A' grade in Intermediate Drawing, Gujarat State Examination Board\hfill 2007\\
+\begin{itemizemisc}
+\item Highest CGPA in UG among wards of SVB trust\hfill 2014
+\item Highest percentage in HSC among wards of SVB trust\hfill 2011
+\item $top\ 2.5\%ile$ in All India Engineering Entrance Examination (AIEEE)\hfill 2010
+\item $97.5 / 120$ in Gujarat Common Entrance Test (GUJCET)\hfill 2010
+\item Certified `A' grade in Intermediate Drawing, Gujarat State Exam. Board\hfill 2007
+\end{itemizemisc}
 
-%\section{Extracurriculars}
-% \vspace{\topsep} % Hacky fix for awkward extra vertical space
-%\begin{tabular}{ll}
-%2013 & Founder and coordinator of  \href{http://lpdaiict.wordpress.com/}{LINUX PACK CLUB}, DA-IICT.\\
-%2012 & Attended \textbf{Programming System on Chip-3 (PSoC-3) Workshop}.\\
-%2012 & Attended \textbf{Research Workshop on Intro. to Graph and Geometric Algo.}
-%\end{tabular}
+\section{Extracurriculars}
+\begin{itemizemisc}
+\item Coordinator of \emph{Argentine Tango - Social Dance Club}, \psu.\hfill 2019-20 % Fall 2019 and Spring 2020
+\item Co-founder of the \href{http://lpdaiict.wordpress.com/}{\itshape Linux Pack Club}, \daiict.\hfill 2013
+\end{itemizemisc}
+
+% \section{Attended}
+% \item DEFCON 26, 2019
+% \item Attended \emph{Programming System on Chip-3 (PSoC-3) Workshop}.\hfill 2012
+% \item Attended \emph{Research Workshop on Intro. to Graph and Geometric Algo.}\hfill 2012
+
+\section{Hobbies}
+    Karate \textbullet{}
+    Argentine Tango
 
 \end{resume} 
 \end{document} 
