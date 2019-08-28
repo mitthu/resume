@@ -113,28 +113,44 @@ GPA: 9.52 (of 10) in major,
 \hfill Summer  2019 % May 13 - August 16
 \begin{itemizeexp}
     \item Added support for Intel VT-d to the Akaros kernel from UC Berkeley.
-    Wrote a device passthru driver with support for processes and VMs.
-    \item Wrote the CBDMA (DMA accelerator on Intel, aka IOAT) driver for
-    Akaros.
+    This allows any PCI/PCIe device to be placed in the address space of a process or a VM.
+    \item Wrote a CBDMA (DMA accelerator on Intel, aka IOAT) driver for Akaros.
+    This was used to test the VT-d support.
+    \item \url{https://github.com/brho/akaros/commits?author=mitthu}
+    % \item Language: C
 \end{itemizeexp}
 
 {\bf Product Security Intern,} NIO, San Jose, CA, USA
 \hfill Summer 2018 % May 2018 - Aug. 2018
 \begin{itemizeexp}
-    \item Worked on securing and pen-testing ES8's (SUV) firmware and it's OBD-II diagnostics port.
-    \item Created driver and firmware patches to fix the vulnerabilities.
+    \item Worked on securing and pen-testing the ES8's (SUV) firmware and
+    OBD-II diagnostics port.
+    \item Wrote a driver for an on-board network switch and created patches
+    to fix the discovered vulnerabilities.
 \end{itemizeexp}
 
 {\bf System Operations,} Media.net, Mumbai, India
 \hfill 2014 - 2016 % July 2014 - July 2016
 \begin{itemizeexp}
-    \item Automating and managing infrastructure serving $>$100 million reqs./day.
-    \item Took two day training session on 
+    \item Automated and managed their web crawling infrastructure serving
+    $>$100 million reqs./day.
+    \item Helped with recruiting and also took training sessions on 
     \begin{enumerate*}[label=(\roman*)]
       \item \textit{Advanced Linux}, and
       \item \textit{Networking}
     \end{enumerate*}
-     for new recruits.
+    for new recruits.
+\end{itemizeexp}
+
+{\bf Software Developer Intern,} \daiict, Gandhinagar, India
+\hfill Summer 2013 \& 2014 % Jun-Jul 2013, Jun-Jul 2014, Jun-Jul 2015
+\begin{itemizeexp}
+    \item Created the admission portal of the university. The portal generated
+    merit-lists and wait-lists of candidates based on their stream preferences
+    and scores. 
+    \item The portal also handled all emails communications, provided a
+    web interface for the candidates and the admissions team.
+    \item Framework used: Django (python)
 \end{itemizeexp}
 
 \section{Projects}
@@ -150,7 +166,7 @@ single-threaded asynchronous model \& multi-threaded synchronous model.\\[2ex]
 
 {\bfseries Personal Web Scrapbook}\hfill
 {\small Django | 10 hrs./week | 8 weeks | \href{https://bitbucket.org/mitthu/capsule/src/}{CODE}}\\
-Scrapes and saves webpages to a central server via chrome extension.\\[2ex]
+Scrapes and saves webpages to a central server via a chrome extension.\\[2ex]
 
 {\bfseries Note-Sync Tool}\hfill
 {\small C | 10 hrs./week | 4 weeks | \href{https://github.com/mitthu/note-sync}{CODE}}\\
