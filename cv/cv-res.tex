@@ -1,11 +1,38 @@
 % Copyright of Aditya Basu, 27-Aug-2019.
+\documentclass[margin]{res}
 
-\documentclass[margin]{res} 
+\newif\ifdraft % skip versioning
+
+%\drafttrue % comment out for actual use
+
 % the margin option causes section titles to appear to the left of body text 
 \textwidth=5.2in % increase textwidth to get smaller right margin
-%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-%\usepackage{newcent}   % uses new century schoolbook postscript font 
+
+% Import packages
+% ---------------
 \usepackage{hyperref}
+\usepackage{scrextend}  % labelling env
+
+% Setup fonts
+% -----------
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+
+\setmainfont[
+	Color=primary,
+	Path=../fonts/lora/,
+	BoldItalicFont=Lora-BoldItalic,
+	BoldFont=Lora-Bold,
+	ItalicFont=Lora-Italic
+]{Lora-Regular}
+
+\setsansfont[
+	Color=primary,
+	Path=../fonts/lato/,
+	BoldItalicFont=Lato-RegIta,
+	BoldFont=Lato-Reg,
+	ItalicFont=Lato-RegIta
+]{Lato-Reg}
 
 % Custom lists, package: enumitem
 \usepackage[inline]{enumitem}
@@ -26,7 +53,13 @@
 \usepackage{fancyhdr}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0.4pt}
-\newcommand{\version}{\input|"make -f ../Makefile --silent version"}
+
+\ifdraft
+	\newcommand{\version}{}
+\else
+	\newcommand{\version}{\input|"make -f ../Makefile --silent version"}
+\fi
+
 \pagestyle{fancy}
 \fancyhead{} % clear all header fields
 \fancyfoot{} % clear all footer fields
@@ -36,9 +69,12 @@
 % commands
 \newcommand{\daiict}{\textsc{Da-iict}}
 \newcommand{\psu}{\textsc{PennState}}
+\newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{#1}}
 
 % main document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+
 \raggedright
 \name{Aditya Basu\\[12pt]} % the \\[12pt] adds a blank line after name
 
@@ -96,25 +132,38 @@ GPA: 9.52 (of 10) in major,
 \end{tabular}
 
 \section{Referred Publications}
-\begin{itemize}
-\item
-    Asmit De, Aditya Basu, Swaroop Ghosh and Trent Jaeger.
-    \emph{FIXER: Flow Integrity Extensions in Embedded RISC-V}.
-    In Proceedings of Design, Automation and Test in Europe, 2019 \emph{(in press)}.
-    % conference: DATE
 
-\item
-    Aditya Basu, Anish Mathuria, Nagendra Chowdary.
-    \emph{Automatic Generation of Compact Alphanumeric Shellcodes for x86}.
-    In Proceedings of 10\textsuperscript{th} International Conference on Information Systems Security (Hyderabad, India), 2014.\\
-    \url{http://dx.doi.org/10.1007/978-3-319-13841-1_22}\\
-    (acceptance rate: $19\%$ or $25/129$)\\
+\begin{labeling}{YYYY}
+\item[2020]
+    \textbf{Automatic Generation of Compact Printable Shellcodes for x86}\\
+    Dhrumil Patel, \emph{Aditya Basu}, Anish Mathuria.\\
+    In \emph{14\textsuperscript{th} USENIX Workshop on Offensive Technologies ({WOOT})}.\\
+    {\itshape (acceptance rate: $33.33\%$, or $12/36$)}
+    %\url{https://www.usenix.org/conference/woot20/presentation/patel} \\
+
+\item[2020]
+    \textbf{Hardware Assisted Buffer Protection Mechanisms for Embedded RISC-V}\\
+    Asmit De, \emph{Aditya Basu}, Swaroop Ghosh, Trent Jaeger.\\
+    In \emph{IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems}.
+    {\itshape (doi: \doi{10.1109/TCAD.2020.2984407}, impact factor = 2.168)}
+
+\item[2019]
+    \textbf{FIXER: Flow Integrity Extensions in Embedded RISC-V}\\
+    Asmit De, \emph{Aditya Basu}, Swaroop Ghosh and Trent Jaeger.\\
+    In \emph{Proceedings of Design, Automation and Test in Europe (DATE)}.\\
+    {\itshape (doi: \doi{10.23919/DATE.2019.8714980}, acceptance rate: $24\%$)}
+
+\item[2014]
+    \textbf{Automatic Generation of Compact Alphanumeric Shellcodes for x86}\\
+    \emph{Aditya Basu}, Anish Mathuria, Nagendra Chowdary.\\
+    In Proceedings of 10\textsuperscript{th} International Conference on Information Systems Security (ICISS).\\
+    {\itshape (doi: \doi{10.1007/978-3-319-13841-1\_22}, acceptance rate: $19\%$, or $25/129$)}
     % code: \url{https://bitbucket.org/mitthu/alpha_loaders/src}
     % pdf: \url{https://dl.dropboxusercontent.com/u/9020146/resources/alpha-x86.pdf}
     % ppt: \url{https://dl.dropboxusercontent.com/u/9020146/resources/ppt/alpha-x86.pdf}
-    % conference: ICISS
     % book: LNCS 8880, Springer, pp. 399-410
-\end{itemize}
+    % location: Hyderabad, India.
+\end{labeling}
 
 \section{Industry Experience}
 %{\bf Title,} Company, City, State, Country \hfill Year

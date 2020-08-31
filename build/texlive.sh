@@ -135,6 +135,7 @@ tlmgr install \
   times       \
   underscore  \
   url         \
+  koma-script \
   zapfding
 
 # Keep no backups (not required, simply makes cache bigger)
