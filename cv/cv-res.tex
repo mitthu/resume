@@ -43,12 +43,6 @@
     itemsep     = -2pt % reduce space between items
 }
 
-\newlist{itemizemisc}{itemize}{1} % itemize experience
-\setlist[itemizemisc]{
-    label       = \textbullet,
-    itemsep     = -2pt % reduce space between items
-}
-
 % setup header and footer
 \usepackage{fancyhdr}
 \renewcommand{\headrulewidth}{0pt}
@@ -67,7 +61,7 @@
 \rfoot{\thepage}
 
 % commands
-\newcommand{\daiict}{\textsc{Da-iict}}
+\newcommand{\daiict}{\textsc{DAIICT}}
 \newcommand{\psu}{\textsc{PennState}}
 \newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{#1}}
 
@@ -97,6 +91,7 @@
 % * add a comment on rural internship
 % * move all additional stuff from resume to cv
 % * update the resume to only have the necessary information
+% * link my testimonial for DAIICT's placement cell
 
 \section{About}
 My research interests are in \emph{Systems Security} and \emph{Operating Systems}.
@@ -251,14 +246,14 @@ Watches a note via inotify (on Linux) / kqueues (on Mac OS X) and syncs it upon 
 %    Mesos, Hadoop, HBase
 %    Wireshark
 \begin{description}
-    \item[$>10k$ lines:]
+    \item[>10k lines:]
         C \textbullet{}
         Python \textbullet{}
         bash \textbullet{}
         \LaTeX\ (macros) \textbullet{}
         HTML
 
-    \item[$5k-10k$ lines:]
+    \item[5k --- 10k lines:]
         Django \textbullet{}
         Puppet \textbullet{}
         Ansible \textbullet{}
@@ -281,19 +276,21 @@ Watches a note via inotify (on Linux) / kqueues (on Mac OS X) and syncs it upon 
 
 \section{Awards and Certifications}
 % add GRE and TOEFL scores
-\begin{itemizemisc}
-\item Highest CGPA in UG among wards of SVB trust\hfill 2014
-\item Highest percentage in HSC among wards of SVB trust\hfill 2011
-\item $top\ 2.5\%ile$ in All India Engineering Entrance Examination (AIEEE)\hfill 2010
-\item $97.5 / 120$ in Gujarat Common Entrance Test (GUJCET)\hfill 2010
-\item Certified `A' grade in Intermediate Drawing, Gujarat State Exam. Board\hfill 2007
-\end{itemizemisc}
+\begin{labeling}{YYYY}
+\item[2014] Highest CGPA in baccalaureate among wards of SVB trust
+\item[2011] Highest percentage in HSC among wards of SVB trust
+\item[2010] In \emph{top 2.5 percentile} of All India Engineering Entrance Examination (AIEEE)
+\item[2010] \emph{97.5/120} in Gujarat Common Entrance Test (GUJCET)
+\item[2007] Certified `A' grade in Intermediate Drawing, Gujarat State Exam. Board
+\end{labeling}
 
 \section{Extracurriculars}
-\begin{itemizemisc}
-\item Coordinator of \emph{Argentine Tango - Social Dance Club}, \psu.\hfill 2019-20 % Fall 2019 and Spring 2020
-\item Co-founder of the \href{http://lpdaiict.wordpress.com/}{\itshape Linux Pack Club}, \daiict.\hfill 2013
-\end{itemizemisc}
+
+\begin{labeling}{YYYY-YY}
+\item[2020-21] President of \emph{Social Dance Club} and \emph{Shotokan Karate-do Club} at \psu.
+\item[2019-20] Coordinator of \emph{Argentine Tango (of Social Dance Club)} at \psu. % Fall 2019 and Spring 2020
+\item[2013] Started the \href{http://lpdaiict.wordpress.com/}{\itshape Linux Pack Club} at \daiict.
+\end{labeling}
 
 % \section{Attended}
 % \item DEFCON 26, 2019
